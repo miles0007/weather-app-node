@@ -1,0 +1,18 @@
+{{>top}}
+
+
+<div>
+    <h2>{{ title }}</h2>
+    {{>header}}
+    <img class="potrait-image" src="/img/robo.jfif" alt="robo">
+    <p>Created By: {{ author }}</p>
+    <div class="founders">
+        {{#each founders}}
+        <div class="person">
+            <p>{{ this }}</p>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+{{>bottom}}
