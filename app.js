@@ -9,6 +9,7 @@ const publicDirectory = path.join(__dirname, './public')
 const viewPath = path.join(__dirname, './public/templates/views')
 const partialsPath = path.join(__dirname, './public/templates/partials')
 
+const port = process.env.PORT || 8000;
 const app = express()
 
 // Setting Handler bar Engine and setting view path and partials path
@@ -68,4 +69,4 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(8000, () => console.log("Listening on Port : 8000"))
+app.listen(port, () => console.log("Listening on Port : 8000"))

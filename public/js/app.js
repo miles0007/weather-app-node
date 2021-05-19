@@ -21,7 +21,7 @@ function formFunctionality() {
             messageOne.textContent = "Must enter address to submit the form."
         } else {
             messageOne.textContent = 'Loading..'
-            fetch('http://localhost:8000/weather?address='+place.value).then(response => {
+            fetch('/weather?address='+place.value).then(response => {
                 response.json().then(data => {
                     if (data.err) {
                         messageOne.textContent = data.err;
