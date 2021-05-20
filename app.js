@@ -24,8 +24,7 @@ app.use(express.static(publicDirectory))
 
 app.get('/', (req, res) => {
     res.render('index', {
-        title: "Home Page",
-        author: "Daniel Richards"
+        title: "Weather App",
     })
 })
 
@@ -34,8 +33,7 @@ app.get('/about', (req, res) => {
     const founders = ["Bill Gates","Steve Jobs","Elon Musk"]
     res.render('about', {
         title: 'An About Page',
-        author: 'Travesy Media',
-        founders: founders,
+        author: 'Robot',
     })
 })
 
@@ -57,9 +55,9 @@ app.get('/weather', (req, res) => {
     });
 })
 
-app.get('/help/*', (req, res) => {
-    res.render('404', {
-        message: 'The Help file doesn\'t exists.'
+app.get('/help', (req, res) => {
+    res.render('help', {
+        title: 'Help'
     })
 })
 
